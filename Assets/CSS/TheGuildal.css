@@ -3,15 +3,58 @@
 }
 body { 
     background-color: rgb(0, 0, 0);
+    color: rgb(214, 164, 27);
     width: 80%; /* Set a fixed width for the body element */ 
-    margin: 0 auto; /* Center the body element within its parent */ 
+    margin-left: auto;
+    margin-right: auto;
   } 
+  a:visited{
+    color: white;
+  }
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
   }
-.eventlayout {
-    
+.navbar{
+ position: relative;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0px;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 150px;
+}
+.navbar a:hover{
+    background-color: hsl(0, 0%, 10%);
+}
+.navbar li{
+    display: inline-block;
+}
+
+.eventlayout{
+    padding-top: 25px;
+}
+.eapp-events-calendar-events-calendar-title.jsx-768327535{
+    text-align: center;
+}
+
+.top{
+    position: absolute;
+    left: 95%;
+    position: fixed;
+    bottom: 10px;
 }

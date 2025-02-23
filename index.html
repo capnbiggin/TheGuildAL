@@ -11,27 +11,27 @@
   </head>
   <body>
     <!--<h1>The Guild</h1>-->  
-    <img src="Assets\IMG\462250684_518305167825052_7523294886360220715_n.jpg">
+    <img src="Assets\IMG\462250684_518305167825052_7523294886360220715_n.jpg" id="top">
     
     <main>
     </main>
     <!--navbar-->
     
-    <nav class="navbar">
-        <ul>
-          <il>Events</il>
-          <il>Contact</il>
-          <il>Location</il>
-          <il></il>
-        </ul>
-    </nav>
+    <div class="navbar">
+      <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
 
-  <!-- Elfsight Event Calendar | Guild Event Calendar -->
-  <div eventlayout>
-  <script src="https://static.elfsight.com/platform/platform.js" async></script>
-  <div class="elfsight-app-cc20b764-ee3f-4227-8481-a91e4f318d0c" data-elfsight-app-lazy></div>
-  </div>
+    <!-- Elfsight Event Calendar | Guild Event Calendar -->
+    <div id="events" class="eventlayout">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-cc20b764-ee3f-4227-8481-a91e4f318d0c" data-elfsight-app-lazy></div>
+    </div>
 
-    <script src="index.js"></script>
+    <span class="top"><a href="#top">Back to Top</a></span>
   </body>
 </html>
