@@ -13,10 +13,10 @@ body {
     color: white;
   }
 .logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
   }
 section{
   background-color: hsl(0, 0%, 13%);
@@ -31,7 +31,7 @@ nav {
     padding: 0px;
     margin: 0;
     overflow: hidden;
-    display: flex;
+    display: block;
 
 }
 .ml-lg-auto{
@@ -64,7 +64,7 @@ nav {
 li .navLink{
     
 }
-.navbar .mobilenav{
+.navbar .icon{
   display: none;
 }
 .sicon{
@@ -79,7 +79,7 @@ li .navLink{
 
 /*Event section*/
 .eventlayout{
-    padding: 10px;
+    padding: 20px;
 }
 /*.eapp-events-calendar-events-calendar-title.jsx-768327535{
     text-align: center;
