@@ -18,6 +18,11 @@ body {
     margin-right: auto;
     
   }
+section{
+  background-color: hsl(0, 0%, 13%);
+  border-radius: 40px;
+  background-color: #202020;
+}
 
 /*navbar*/
 nav {
@@ -59,17 +64,22 @@ nav {
 li .navLink{
     
 }
+.navbar .mobilenav{
+  display: none;
+}
 .sicon{
     width: 20px;
     height: 20px;
     filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(34deg) brightness(102%) contrast(101%);
-    
-    padding: 10;
+    padding: 5px;
+    align-items: center;
+    float: right;
 }
+
 
 /*Event section*/
 .eventlayout{
-    padding-top: 25px;
+    padding: 10px;
 }
 /*.eapp-events-calendar-events-calendar-title.jsx-768327535{
     text-align: center;
