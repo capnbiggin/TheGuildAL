@@ -1,0 +1,42 @@
+@use '../util' as u;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: u.$font;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+
+a, a:hover, a:visited{
+  color: var(--clr-light);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  justify-content: center;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
