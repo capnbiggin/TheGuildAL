@@ -1,0 +1,146 @@
+
+
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: black;
+  color: white;
+}
+
+a,a:visited{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: hsl(71, 78%, 78%);
+}
+
+nav{
+  height: 4em;
+  background-color: #111111;
+}
+.navBar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4em;
+}
+.navBar .nav-logo{
+  width: 200px;
+  transform: translateY(3em);
+}
+.navBar ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.navBar li{
+  list-style: none;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.mobile-nav{
+  display: none;
+}
+
+.banner{
+  
+}
+.banner-img{
+  width: 100%;
+}
+
+.social{
+  position: absolute;
+  top: 4em;
+  right: 10%;
+}
+.sicon{
+  height: 30px;
+  width: 30px;
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(34deg) brightness(102%) contrast(101%);
+  margin: 10px;
+}
+
+/*Event section*/
+.eventlayout{
+  
+}
+/*.eapp-events-calendar-events-calendar-title.jsx-768327535{
+    text-align: center;
+}*/
+
+/*START BACK TO TOP BUTTON*/
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    /*background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  #myBtn img{
+    width: 20px;
+    height: 20px;
+  }
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+/*END BACK TO TOP BUTTON*/
+
+section{
+  display: flexbox;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 50px auto;
+
+}
+
+
+@media screen and (max-width: 1000px){
+  .navBar{
+    padding: 10px 50px;
+  }
+  .navBar .nav-logo{
+    width: 180px;
+  }
+  .mobile-nav{
+    display: block;
+  }
+  .social{
+    right: 100px;
+  }
+}
+@media screen and (max-width: 600px){
+  .navBar .nav-logo{
+    width: 130px;
+  }
+  .mobile-nav{
+    display: contents;
+  }
+  .social{
+    right: 50px;
+  }
+}
