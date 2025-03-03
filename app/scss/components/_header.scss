@@ -1,41 +1,88 @@
 .header {
-    height: 3rem;
+    height: 3.5rem;
     background-color: var(--clr-slate-800);
-    align-items: center;    
 
     &__img {
         position: absolute;
         top: 0;
         left: 3rem;
         width: 180px;
+        z-index: 11
     }
 
-    &__mobile {
-        display: block;
+    &__mobile-nav-btn {
         position: absolute;
         top: 0.5rem;
         right: 1rem;
         align-items: center;
-        height: 2rem;
-        width: 2rem;
+        height: 2.25rem;
+        width: 2.25rem;
+        padding: 0.5rem;
         color: var(--clr-light);
+        background: none;
+        z-index: 10;
     }
 
     &__nav-menu {
-        display: none;
-
+        position: absolute;
+        right: -200%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--clr-slate-800);
+        height: 110dvh;
+        width: 100vw;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9;
+        transition: 0.15s ease-in-out;
     }
-    &__link {
-        height: 100%;
+}
 
-        &:hover {
-            color: var(--clr-slate-500);
+.active {
+    right: 0;
+}
+
+.overlay{
+    background: rgba(0, 0, 0, 0.532);
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    
+}
+
+nav li {
+    height: 4rem;
+    text-transform: uppercase;
+}
+nav a {
+    height: 100%;
+    display: flex;
+    padding: 0 20px;
+    color: var(--clr-light);
+    align-items: center;
+    justify-content: center;
+}
+nav a:hover {
+    height: 100%;
+    background-color: var(--clr-slate-700);
+}
+
+@media (max-width: 775px) {
+    .header {
+
+        &__nav-menu li {
+            width: 100%;
+        }
+
+        &__nav-menu a {
+            width: 100%;
         }
     }
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 776px) {
     .header {
         height: 4rem;
         
@@ -44,20 +91,19 @@
             top: 0;
         }
 
-        &__mobile {
+        &__nav-menu {
+            top: 0;
+            right: 0;
+            height: 4rem;
+            width: 100%;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        &__mobile-nav-btn {
             display: none;
         }
-
-        &__nav-menu {
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            height: 4rem;
-            list-style: none;
-            gap: 3rem;
-            margin-right:  3rem;
-            text-align: center;
-        }
-
     }
 }

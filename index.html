@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
-    <link rel="stylesheet" href="./dist/style.css">
-    <title>The Guild</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+        <link rel="stylesheet" href="./dist/style.css">
+        <script src="/app/js/mobile-nav.js"></script>
+        <title>The Guild</title>
+    </head>
+    <body>
     <header class="header">
+        <!--Header Img-->
         <img class="header__img" src="./app/img/Guild Tattoo Logo - 3D.png" alt="The Guild Logo">
         <nav>
-            <a href="#"><img class="header__mobile" src="app/img/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-            </a>
+            <!--Mobile Menu Button-->
+            
+            <button onclick="toggleActive()" class="header__mobile-nav-btn"><img src="app/img/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>
+            
+            <!--Menu-->
             <ul class="header__nav-menu">
-                <li><a class="header__link" href="#events">Events</a></li>
-                <li><a class="header__link" href="#tattoo">Tattoo<br>Artist</a></li>
-                <li><a class="header__link" href="https://www.tcgplayer.com/search/all/product?seller=7d154405&view=grid " target="_blank">TCG<br>Palyer</a></li>
-                <li><a class="header__link" href="#location">Location</a></li>
+                <li><a onclick="removeAtive()" href="#events">Events</a></li>
+                <li><a onclick="removeAtive()" href="#tattoo">Tattoo Artist</a></li>
+                <li><a onclick="removeAtive()" href="https://www.tcgplayer.com/search/all/product?seller=7d154405&view=grid " target="_blank">TCG Palyer</a></li>
+                <li><a onclick="removeAtive()" href="#location">Location</a></li>
             </ul>
+
         </nav>
     </header>
     <!--Banner-->
@@ -29,23 +35,35 @@
         <img src="https://fakeimg.pl/1920x1080" alt="place Holder">
     </div>
     <!--Events-->
-   <div id="events" class="wrapper">
+   <div id="events" class="events__container container__title">
     <!-- Elfsight Event Calendar | Guild Events -->
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <div class="elfsight-app-cc20b764-ee3f-4227-8481-a91e4f318d0c" data-elfsight-app-lazy></div>
    </div>
    <!--Tattoo Artist-->
-   <div id="tattoo" class="wrapper">
-
+   <h1 class="container__title">Tattoo Artist</h1>
+   <div id="tattoo" class="wrapper tattoo">
+        <div class="tattoo__artist-1">
+            <img src="https://fakeimg.pl/500x500" alt="Place Holder">
+        </div>
+        <div class="tattoo__artist-2">
+            <img src="https://fakeimg.pl/500x500" alt="Place Holder">
+        </div>
    </div>
    <!--Location-->
-    <div id="location" class="wrapper">
-        
-        <iframe title="The Guild" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.739055796748!2d-87.22829442369886!3d33.838235473238306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888861d80a5990c7%3A0x1ce00054118d2c2b!2sThe%20Guild%20(aka%20Gamer&#39;s%20Guild)!5e1!3m2!1sen!2sus!4v1740619788310!5m2!1sen!2sus" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <h1 class="container__title">Contact & Location</h1>
+    <div id="location" class="wrapper location">
+        <div class="location__contact">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aspernatur repellendus maiores consequuntur neque aliquam incidunt voluptatibus dolorum molestiae molestias!</p>
+        </div>
+        <div class="location__map">
+            <iframe title="The Guild" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.739055796748!2d-87.22829442369886!3d33.838235473238306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888861d80a5990c7%3A0x1ce00054118d2c2b!2sThe%20Guild%20(aka%20Gamer&#39;s%20Guild)!5e1!3m2!1sen!2sus!4v1740619788310!5m2!1sen!2sus" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
     <!--Footer-->
-    <footer class="wrapper">
+    <footer class="container__title">
         <h5>~The Guild 2025~</h5>
     </footer>
+    <script src="/app/js/mobile-nav.js"></script>
 </body>
 </html>

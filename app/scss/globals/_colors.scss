@@ -1,11 +1,20 @@
 :root {
     --clr-dark: oklch(0.208 0.042 265.755);
+    //dark hex #0f172b
     --clr-light: oklch(0.968 0.007 247.896);
+    //light hex #f1f5f9
     --clr-slate-800: oklch(0.279 0.041 260.031);
+    //800 hex #1d293d
     --clr-slate-700: oklch(0.372 0.044 257.287);
+    //700 hex #314158
     --clr-slate-600: oklch(0.446 0.043 257.281);
+    //600 hex #45556c
     --clr-slate-500: oklch(0.554 0.046 257.417);
-    --clr-slate-200: oklch(0.929 0.013 255.508);
+    //500 hex #62748e
+    --clr-slate-400: oklch(0.704 0.04 256.788);
+    //400 hex #90a1b9
     --clr-slate-300: oklch(0.869 0.022 252.894);
-
+    //300 hex #cad5e2
+    --clr-slate-200: oklch(0.929 0.013 255.508);
+    //200 hex #e2e8f0
 }

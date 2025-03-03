@@ -17,6 +17,7 @@ body {
   font-family: u.$font;
   background-color: var(--clr-dark);
   color: var(--clr-light);
+  overflow-x: hidden;
 }
 
 a, a:hover, a:visited{
@@ -28,15 +29,44 @@ img {
   width: 100%;
 }
 
+.container__title {
+  text-align: center;
+}
+
+.events__container {
+  display: grid;
+  justify-content: center;
+  width: 80vw;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 0;
+}
+
 .wrapper {
   display: grid;
   justify-content: center;
   width: 80vw;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem 0;
+  gap: 10vw;
 
   &:last-child {
     margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (min-width: 776px)  {
+  .wrapper {
+    grid-template-columns: auto auto;
   }
 }
