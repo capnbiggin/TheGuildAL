@@ -1,0 +1,31 @@
+:root {
+    --space-lr: 40px;
+    --space-gap: 20px;
+    --col-count: 2;
+
+    --sec-pad-top: 2rem;
+    
+    @media (width >= 43.75em) {
+      --space-lr: 80px;
+      --space-gap: 30px;
+      --col-count: 6;
+
+      --sec-pad-top: 3rem;
+    }
+    
+    @media (width >= 62.5em) {
+      --col-count: 12;
+
+      --sec-pad-top: 4rem;
+    }
+}
+
+
+.wrapper {
+  
+    display: grid;
+    grid-template-columns: 1fr repeat(var(--col-count), calc((min(100% - var(--space-lr), 60rem) - (var(--col-count) - 1) * var(--space-gap)) / var(--col-count))) 1fr;
+    gap: var(--space-gap);
+    padding-top: var(--sec-pad-top);
+  
+}

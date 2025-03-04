@@ -1,16 +1,21 @@
-.header {
+.topnav {
     height: 3.5rem;
     background-color: var(--clr-slate-800);
 
     &__img {
         position: absolute;
         top: 0;
-        left: 3rem;
-        width: 180px;
-        z-index: 11
+        left: 2rem;
+        width: 150px;
+        z-index: 11;
+        
+        @media (width >= 400px) {
+            width: 180px;
+            left: 3rem;
+        }
     }
 
-    &__mobile-nav-btn {
+    &__menu-btn {
         position: absolute;
         top: 0.5rem;
         right: 1rem;
@@ -20,16 +25,22 @@
         padding: 0.5rem;
         color: var(--clr-light);
         background: none;
-        z-index: 10;
+        
     }
 
-    &__nav-menu {
-        position: absolute;
-        right: -200%;
+    button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__menu {
+        position: fixed;
+        right: -100vw;
         display: flex;
         flex-direction: column;
         background-color: var(--clr-slate-800);
-        height: 110dvh;
+        height: 100dvh;
         width: 100vw;
         list-style: none;
         align-items: center;
@@ -37,45 +48,37 @@
         z-index: 9;
         transition: 0.15s ease-in-out;
     }
+
+    &__item {
+        height: 4rem;
+        text-transform: uppercase;
+    }
+    &__link {
+        height: 100%;
+        display: flex;
+        padding: 0 20px;
+        color: var(--clr-light);
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+    &__link:hover {
+        background-color: var(--clr-slate-700);
+    }
 }
 
-.active {
+.nav-active {
     right: 0;
 }
 
-.overlay{
-    background: rgba(0, 0, 0, 0.532);
-    position: fixed;
-    inset: 0;
-    z-index: 5;
-    
-}
-
-nav li {
-    height: 4rem;
-    text-transform: uppercase;
-}
-nav a {
-    height: 100%;
-    display: flex;
-    padding: 0 20px;
-    color: var(--clr-light);
-    align-items: center;
-    justify-content: center;
-}
-nav a:hover {
-    height: 100%;
-    background-color: var(--clr-slate-700);
-}
-
 @media (max-width: 775px) {
-    .header {
+    .topnav {
 
-        &__nav-menu li {
+        &__item {
             width: 100%;
         }
 
-        &__nav-menu a {
+        &__link {
             width: 100%;
         }
     }
@@ -83,7 +86,7 @@ nav a:hover {
 
 
 @media (min-width: 776px) {
-    .header {
+    .topnav {
         height: 4rem;
         
         &__img {
@@ -91,7 +94,7 @@ nav a:hover {
             top: 0;
         }
 
-        &__nav-menu {
+        &__menu {
             top: 0;
             right: 0;
             height: 4rem;
@@ -102,7 +105,7 @@ nav a:hover {
             justify-content: flex-end;
         }
 
-        &__mobile-nav-btn {
+        &__menu-btn {
             display: none;
         }
     }

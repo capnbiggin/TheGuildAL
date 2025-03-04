@@ -1,14 +1,15 @@
 @use '../util' as u;
 
 html {
-  box-sizing: border-box;
-  font-size: 100%;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -21,52 +22,14 @@ body {
 }
 
 a, a:hover, a:visited{
-  color: var(--clr-light);
-  text-decoration: none;
+  color: currentColor;
 }
 
 img {
   width: 100%;
-}
-
-.container__title {
-  text-align: center;
-}
-
-.events__container {
-  display: grid;
-  justify-content: center;
-  width: 80vw;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2rem 0;
-}
-
-.wrapper {
-  display: grid;
-  justify-content: center;
-  width: 80vw;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2rem 0;
-  gap: 10vw;
-
-  &:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
+  display: block;
 }
 
 button {
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-
-@media (min-width: 776px)  {
-  .wrapper {
-    grid-template-columns: auto auto;
-  }
+  font-family: inherit;
 }

@@ -1,9 +1,15 @@
-function toggleActive() {
-    const navToggle = document.querySelector(".header__nav-menu");
-    navToggle.classList.toggle("active")
+
+
+function addActive() {
+    const navToggle = document.querySelector(".topnav__menu");
+    const body = document.querySelector('body');
+    navToggle.classList.add("nav-active")
+    bodyScrollLockUpgrade.disableBodyScroll(body);
 }
 
 function removeAtive() {
-    const navToggle = document.querySelector(".header__nav-menu");
-    navToggle.classList.remove("active")
+    const navToggle = document.querySelector(".topnav__menu");
+    const body = document.querySelector('body');
+    navToggle.classList.remove("nav-active")
+    bodyScrollLockUpgrade.enableBodyScroll(body);
 }
