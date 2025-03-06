@@ -1,0 +1,62 @@
+:root {
+	// Site Color
+	--clr-dark: var(--color-slate-900);
+	--clr-light: var(--color-slate-100);
+	--color-black: #000;
+	--color-white: #fff;
+	--clr-50: var(--color-slate-50);
+	--clr-100: var(--color-slate-100);
+	--clr-200: var(--color-slate-200);
+	--clr-300: var(--color-slate-300);
+	--clr-400: var(--color-slate-400);
+	--clr-500: var(--color-slate-500);
+	--clr-600: var(--color-slate-600);
+	--clr-700: var(--color-slate-700);
+	--clr-800: var(--color-slate-800);
+	--clr-900: var(--color-slate-900);
+	--clr-950: var(--color-slate-950);
+
+	// Padding/Margins
+	--size-p-1: 4px;
+	--size-p-2: 8px;
+	--size-p-3: 16px;
+	--size-p-4: 20px;
+	--size-p-5: 40px;
+	--size-p-6: 80px;
+	--size-p-7: 160px;
+	--size-p-8: 320px;
+
+	--space-lr: 40px;
+	--space-gap: 20px;
+	--col-count: 2;
+
+	--section-pad-top: 2rem;
+
+	// Site Width
+	--site-width: min(100% - var(--space-lr), 60rem);
+
+	// Grid Spacing
+	--grid-col-spacing-1: 1fr
+		repeat(
+			var(--col-count),
+			calc(
+				(var(--site-width) - (var(--col-count) - 1) * var(--space-gap)) /
+					var(--col-count)
+			)
+		)
+		1fr;
+
+	@media (width >= 43.75em) {
+		--space-lr: 80px;
+		--space-gap: 30px;
+		--col-count: 6;
+
+		--sec-pad-top: 3rem;
+	}
+
+	@media (width >= 62.5em) {
+		--col-count: 12;
+
+		--sec-pad-top: 4rem;
+	}
+}

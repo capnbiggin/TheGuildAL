@@ -1,5 +1,5 @@
 .events {
-    width: min(100% - var(--space-lr), 60rem);
-    margin-inline: auto;
-    padding-top: var(--section-pad-top);
+	width: var(--site-width);
+	padding-top: var(--section-pad-top);
+	margin-inline: auto;
 }
