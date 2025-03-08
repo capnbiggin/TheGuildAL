@@ -28,35 +28,36 @@
 
 	--space-lr: 40px;
 	--space-gap: 20px;
-	--col-count: 2;
+	--grid-count: 2;
 
-	--section-pad-top: 2rem;
-
-	// Site Width
-	--site-width: min(100% - var(--space-lr), 60rem);
-
-	// Grid Spacing
-	--grid-col-spacing-1: 1fr
-		repeat(
-			var(--col-count),
-			calc(
-				(var(--site-width) - (var(--col-count) - 1) * var(--space-gap)) /
-					var(--col-count)
-			)
-		)
-		1fr;
+	--section-pad-top: var(--size-p-5);
 
 	@media (width >= 43.75em) {
-		--space-lr: 80px;
+		--space-lr: var(--size-p-5);
 		--space-gap: 30px;
-		--col-count: 6;
-
-		--sec-pad-top: 3rem;
+		--grid-count: 6;
 	}
 
 	@media (width >= 62.5em) {
-		--col-count: 12;
+		--grid-count: 12;
 
-		--sec-pad-top: 4rem;
+		--sec-pad-top: var(--size-p-6);
 	}
+
+	// Site Width
+	--max-site-width: 65rem;
+	--site-width: min(100% - var(--space-lr), var(--max-site-width));
+	--banner-width: min(100%, 75rem);
+
+	// Grid Spacing
+	--grid-col-spacing: 1fr
+		repeat(
+			var(--grid-count),
+			calc(
+				(var(--site-width) - (var(--grid-count) - 1) * var(--space-gap)) /
+					var(--grid-count)
+			)
+		)
+		1fr;
+	--grid-row-spacing: 1fr repeat(var(--grid-count)) 1fr;
 }

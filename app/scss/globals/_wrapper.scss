@@ -1,6 +1,18 @@
-.wrapper {
-	display: grid;
-	grid-template-columns: var(--grid-col-spacing-1);
-	gap: var(--space-gap);
-	padding-top: var(--sec-pad-top);
+.location {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: var(--grid-col-spacing);
+		gap: var(--space-gap);
+		padding: var(--size-p-4) 0;
+	}
+}
+
+.tattoo {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: var(--grid-col-spacing);
+		grid-template-rows: var(--grid-row-spacing);
+		gap: var(--space-gap);
+		padding: var(--size-p-4) 0;
+	}
 }

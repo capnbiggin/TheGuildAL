@@ -1,9 +1,7 @@
 .footer {
-    
+	text-align: center;
 
-    &__title {
-        grid-column: 2 / -2;
-        text-align: center;
-        
-    }
+	&__title {
+		grid-column: 2 / -2;
+	}
 }

@@ -1,4 +1,9 @@
 .location {
+	display: grid;
+	grid-template-columns: var(--grid-col-spacing);
+	gap: var(--space-gap);
+	padding: var(--size-p-4) 0;
+
 	&__title {
 		grid-column: 2 / -2;
 		text-align: center;

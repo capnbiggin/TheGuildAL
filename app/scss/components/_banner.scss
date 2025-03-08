@@ -1,3 +1,4 @@
 .banner {
-    grid-template-columns: 1 / -1;
+	width: var(--banner-width);
+	margin-inline: auto;
 }
