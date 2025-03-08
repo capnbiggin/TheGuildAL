@@ -4,7 +4,7 @@ header {
 }
 
 .topnav {
-	width: var(--site-width);
+	width: 100%;
 	margin-inline: auto;
 
 	&__img {
@@ -24,7 +24,13 @@ header {
 		}
 	}
 
-	&__menu-btn {
+	button {
+		outline: none;
+		border: none;
+		cursor: pointer;
+	}
+
+	&__menu-open {
 		position: absolute;
 		top: 0.5rem;
 		right: 1rem;
@@ -36,25 +42,32 @@ header {
 		background: none;
 	}
 
-	button {
+	&__menu-open[aria-expanded="true"] {
+		+ .topnav__menu {
+			translate: 0;
+		}
+	}
+	&__menu-close {
+		position: relative;
+		top: 0.5rem;
+		right: 1rem;
+		display: block;
+		margin-inline-start: auto;
+		margin-block-end: 10rem;
 		outline: none;
 		border: none;
 		cursor: pointer;
+		background: none;
 	}
 
 	&__menu {
-		position: relative;
-		right: -100vw;
-		display: flex;
-		flex-direction: column;
-		background-color: var(--clr-800);
+		position: fixed;
+		inset: 0;
 		height: 100dvh;
-		width: 100%;
-		list-style: none;
-		align-items: center;
-		justify-content: center;
-		z-index: 9;
-		transition: 0.15s ease-in-out;
+		z-index: 2;
+		background-color: var(--clr-800);
+		translate: 100vw 0;
+		transition: 500ms ease-in-out;
 	}
 
 	&__item {
@@ -80,7 +93,7 @@ header {
 	right: 0;
 }
 
-@media (max-width: 775px) {
+@media (width < 48.4375rem) {
 	.topnav {
 		&__item {
 			width: 100%;
@@ -92,7 +105,7 @@ header {
 	}
 }
 
-@media (min-width: 776px) {
+@media (width >= 48.4375rem) {
 	header {
 		height: 4rem;
 	}
@@ -114,16 +127,21 @@ header {
 		}
 
 		&__menu {
+			width: var(--site-width);
 			top: 0;
-			right: 0;
+			translate: 0;
 			height: 4rem;
 			list-style: none;
 			display: flex;
 			flex-direction: row;
 			justify-content: flex-end;
+			margin-inline: auto;
 		}
 
-		&__menu-btn {
+		&__menu-open {
+			display: none;
+		}
+		&__menu-close {
 			display: none;
 		}
 	}

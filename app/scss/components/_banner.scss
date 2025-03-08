@@ -1,4 +1,10 @@
 .banner {
 	width: var(--banner-width);
 	margin-inline: auto;
+	position: relative;
+
+	%__slider-wrapper {
+		position: relative;
+		width: 100%;
+	}
 }

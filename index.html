@@ -6,7 +6,6 @@
 		<link rel="stylesheet" href="./dist/style.css" />
 		<!-- Nav Scroll lock Script -->
 		<script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
-		<script src="/app/js/mobile-nav.js"></script>
 		<title>The Guild</title>
 	</head>
 	<body>
@@ -20,20 +19,34 @@
 					alt="The Guild Logo"
 				/>
 				<!--Mobile Menu Button-->
-				<button onclick="addActive()" class="topnav__menu-btn">
+				<span id="nav-label" hidden>Navigation</span>
+				<button
+					id="menuOpen"
+					class="topnav__menu-open"
+					aria-expanded="false"
+					aria-labelledby="nav-label"
+				>
 					<img
 						src="app/img/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
 						alt=""
 					/>
 				</button>
 				<!--Menu-->
-				<ul class="topnav__menu">
+				<ul
+					class="topnav__menu"
+					role="dialog"
+					aria-labelledby="nav-label"
+				>
 					<img
 						class="topnav__img"
 						src="./app/img/Guild Tattoo Logo - 3D.png"
 						alt="The Guild Logo"
 					/>
-					<button onclick="removeActive()" class="topnav__menu-btn">
+					<button
+						id="menuClose"
+						class="topnav__menu-close"
+						aria-label="close"
+					>
 						<img
 							src="app/img/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
 							alt=""
@@ -42,7 +55,7 @@
 					<li class="topnav__item">
 						<a
 							class="topnav__link"
-							onclick="removeActive()"
+							onclick="closeMobileMenu()"
 							href="#events"
 							>Events</a
 						>
@@ -50,7 +63,7 @@
 					<li class="topnav__item">
 						<a
 							class="topnav__link"
-							onclick="removeActive()"
+							onclick="closeMobileMenu()"
 							href="#tattoo"
 							>Tattoo Artist</a
 						>
@@ -58,7 +71,7 @@
 					<li class="topnav__item">
 						<a
 							class="topnav__link"
-							onclick="removeActive()"
+							onclick="closeMobileMenu()"
 							href="https://www.tcgplayer.com/search/all/product?seller=7d154405&view=grid "
 							target="_blank"
 							>TCG Player</a
@@ -67,7 +80,7 @@
 					<li class="topnav__item">
 						<a
 							class="topnav__link"
-							onclick="removeActive()"
+							onclick="closeMobileMenu()"
 							href="#location"
 							>Location</a
 						>
@@ -78,19 +91,24 @@
 		<main>
 			<!--Banner-->
 			<div class="banner">
-				<picture>
-					<source
-						media="(min-width: 775px)"
-						srcset="
-							app/img/FleshandBlood/pq_singapore_fbpost.original.jpg
-						"
-						alt="place Holder"
-					/>
-					<img
-						src="app/img/FleshandBlood/pq_singapore_social.original.jpg"
-						alt="mobile Place Holder"
-					/>
-				</picture>
+				<div class="banner__slider-wrapper">
+					<div class="banner__slider-items">
+						<img
+							id="slide-1"
+							src="app/img/FleshandBlood/25_01_GEMPACK_HUNTED_FB_POST3.original.jpg"
+							alt=""
+						/>
+						<img
+							id="slide-2"
+							src="app/img/FleshandBlood/pq_singapore_fbpost.original.jpg"
+							alt=""
+						/>
+					</div>
+					<div class="banner__nav">
+						<a href="#slide-1">Slide 1</a>
+						<a href="#slide-2">Slide 2</a>
+					</div>
+				</div>
 			</div>
 			<!--Events-->
 			<div id="events" class="events">
@@ -161,10 +179,11 @@
 					</iframe>
 				</div>
 			</div>
+			<!--Footer-->
+			<footer class="wrapper footer">
+				<span class="footer__title">~The Guild 2025~</span>
+			</footer>
 		</main>
-		<!--Footer-->
-		<footer class="wrapper footer">
-			<span class="footer__title">~The Guild 2025~</span>
-		</footer>
+		<script src="/app/js/mobile-nav.js"></script>
 	</body>
 </html>
