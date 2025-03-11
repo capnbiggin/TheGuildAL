@@ -1,12 +1,4 @@
-header {
-	height: 3.5rem;
-	background-color: var(--clr-800);
-}
-
 .topnav {
-	width: 100%;
-	margin-inline: auto;
-
 	&__img {
 		display: none;
 	}
@@ -14,7 +6,7 @@ header {
 	&__mobile-img {
 		position: absolute;
 		top: 0;
-		left: 2rem;
+		left: 1rem;
 		width: 150px;
 		z-index: 11;
 
@@ -24,10 +16,15 @@ header {
 		}
 	}
 
+	svg path {
+		color: var(--clr-light);
+	}
+
 	button {
 		outline: none;
 		border: none;
 		cursor: pointer;
+		background: none;
 	}
 
 	&__menu-open {
@@ -35,11 +32,11 @@ header {
 		top: 0.5rem;
 		right: 1rem;
 		align-items: center;
-		height: 2.25rem;
-		width: 2.25rem;
+		height: 3rem;
+		width: 3rem;
 		padding: 0.5rem;
 		color: var(--clr-light);
-		background: none;
+		z-index: 1;
 	}
 
 	&__menu-open[aria-expanded="true"] {
@@ -54,14 +51,12 @@ header {
 		display: block;
 		margin-inline-start: auto;
 		margin-block-end: 10rem;
-		outline: none;
-		border: none;
-		cursor: pointer;
-		background: none;
+		height: 3rem;
+		width: 3rem;
 	}
 
 	&__menu {
-		position: fixed;
+		position: absolute;
 		inset: 0;
 		height: 100dvh;
 		z-index: 2;
@@ -74,6 +69,7 @@ header {
 		height: 100%;
 		height: 4rem;
 		text-transform: uppercase;
+		list-style: none;
 	}
 	&__link {
 		height: 100%;
@@ -106,13 +102,7 @@ header {
 }
 
 @media (width >= 48.4375rem) {
-	header {
-		height: 4rem;
-	}
-
 	.topnav {
-		height: 4rem;
-
 		&__mobile-img {
 			display: none;
 		}
@@ -136,6 +126,7 @@ header {
 			flex-direction: row;
 			justify-content: flex-end;
 			margin-inline: auto;
+			background: none;
 		}
 
 		&__menu-open {

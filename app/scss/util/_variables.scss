@@ -16,6 +16,18 @@
 	--clr-900: var(--color-slate-900);
 	--clr-950: var(--color-slate-950);
 
+	--bg-gradient: linear-gradient(
+		225deg,
+		var(--clr-800) 0%,
+		var(--clr-900) 100%
+	);
+	--tx-gradient: linear-gradient(
+		90deg,
+		var(--clr-100) 0%,
+		var(--clr-200) 50%,
+		var(--clr-300) 100%
+	);
+
 	// Padding/Margins
 	--size-p-1: 4px;
 	--size-p-2: 8px;

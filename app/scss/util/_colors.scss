@@ -1,6 +1,6 @@
 :root {
-	--color-black: #000;
-	--color-white: #fff;
+	--color-black: oklch(0 0 0);
+	--color-white: oklch(1 0 0);
 	//Red Pallet
 	--color-red-50: oklch(0.971 0.013 17.38);
 	--color-red-100: oklch(0.936 0.032 17.717);
@@ -206,19 +206,17 @@
 	--color-rose-900: oklch(0.41 0.159 10.272);
 	--color-rose-950: oklch(0.271 0.105 12.094);
 	//Slate Pallet
-	--color-slate-50: oklch(0.984 0.003 247.858); //50 hsl(210 35% 98%)
-	--color-slate-100: oklch(0.968 0.007 247.896); //100 hsl(210 41% 96%)
-	--color-slate-200: oklch(0.929 0.013 255.508); //200 hsl(214.28 33% 91%)
-	--color-slate-300: oklch(0.869 0.022 252.894); //300 hsl(212.72 30% 84%)
-	--color-slate-400: oklch(0.704 0.04 256.788); //400 hsl(214.99 23% 65%)
-	--color-slate-500: oklch(0.554 0.046 257.417); //500 hsl(215.38 18% 47%)
-	--color-slate-600: oklch(0.446 0.043 257.281); //600 hsl(215.29 22% 35%)
-	--color-slate-700: oklch(
-		0.372 0.044 257.287
-	); //700 hsl(215.29 28.000000000000004% 27%)
-	--color-slate-800: oklch(0.279 0.041 260.031); //800 hsl(217.28 36% 18%)
-	--color-slate-900: oklch(0.208 0.042 265.755); //900 hsl(222.34 49% 11%)
-	--color-slate-950: oklch(0.129 0.042 264.695); //950 hsl(228.82 85% 5%)
+	--color-slate-50: oklch(0.984 0.003 247.858);
+	--color-slate-100: oklch(0.968 0.007 247.896);
+	--color-slate-200: oklch(0.929 0.013 255.508);
+	--color-slate-300: oklch(0.869 0.022 252.894);
+	--color-slate-400: oklch(0.704 0.04 256.788);
+	--color-slate-500: oklch(0.554 0.046 257.417);
+	--color-slate-600: oklch(0.446 0.043 257.281);
+	--color-slate-700: oklch(0.372 0.044 257.287);
+	--color-slate-800: oklch(0.279 0.041 260.031);
+	--color-slate-900: oklch(0.208 0.042 265.755);
+	--color-slate-950: oklch(0.129 0.042 264.695);
 	// Gray Pallet
 	--color-gray-50: oklch(0.985 0.002 247.839);
 	--color-gray-100: oklch(0.967 0.003 264.542);
