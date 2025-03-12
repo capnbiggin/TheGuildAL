@@ -6,23 +6,55 @@
 
 	&__title {
 		grid-column: 2 / -2;
+		grid-row: 1;
 		text-align: center;
 	}
 
-	&__contact {
-		grid-column: 2 / 3;
-		max-width: 50ch;
-		text-align: left;
-
-		h2 {
-			color: var(--clr-400);
-		}
-		h3 {
-			color: var(--clr-400);
-		}
+	&__store-title {
+		grid-column: 2 / -2;
+		grid-row: 3 / 4;
+		text-align: center;
 
 		@media (width >= 43.75em) {
-			grid-column: 3 / 5;
+			grid-column: 2 / -2;
+		}
+
+		@media (width >= 62.5em) {
+			grid-column: 2 / 7;
+		}
+	}
+	&__store-address {
+		grid-column: 2 / 3;
+		grid-row: 4 / 5;
+
+		@media (width >= 43.75em) {
+			grid-column: 2 / 5;
+		}
+
+		@media (width >= 62.5em) {
+			grid-column: 2 / 8;
+		}
+	}
+	&__store-phone {
+		grid-column: 3 / 4;
+		grid-row: 4 / 5;
+		justify-items: center;
+
+		@media (width >= 43.75em) {
+			grid-column: 5 / -2;
+		}
+
+		@media (width >= 62.5em) {
+			grid-column: 5 / 8;
+		}
+	}
+
+	&__store-hours {
+		grid-column: 2 / 3;
+		max-width: 50ch;
+
+		@media (width >= 43.75em) {
+			grid-column: 2 / 5;
 		}
 
 		@media (width >= 62.5em) {
@@ -30,20 +62,12 @@
 		}
 	}
 
-	&__hours {
-		grid-column: 3 / -1;
+	&__tattoo-hours {
+		grid-column: 3 / -2;
 		max-width: 50ch;
-		text-align: left;
-
-		h2 {
-			color: var(--clr-400);
-		}
-		h3 {
-			color: var(--clr-400);
-		}
 
 		@media (width >= 43.75em) {
-			grid-column: 5 / -3;
+			grid-column: 5 / -2;
 		}
 
 		@media (width >= 62.5em) {
@@ -67,11 +91,12 @@
 		}
 
 		@media (width >= 43.75em) {
-			grid-column: 3 / -3;
+			grid-column: 2 / -2;
 		}
 
 		@media (width >= 62.5em) {
 			grid-column: 8 / -2;
+			grid-row: 2 / 5;
 		}
 	}
 }

@@ -1,4 +1,6 @@
 .banner {
+	position: relative;
+	top: -4rem;
 	&__display-desktop-img {
 		display: none;
 		@media (width >= 48.4375rem) {

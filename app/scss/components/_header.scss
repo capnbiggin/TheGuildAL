@@ -81,12 +81,18 @@
 		text-decoration: none;
 	}
 	&__link:hover {
-		background-color: var(--clr-700);
+		background-color: var(--clr-800);
+		transition: 500ms ease-in-out;
+		border-radius: 20px;
 	}
 }
 
 .nav-active {
 	right: 0;
+}
+
+header {
+	height: 3.5rem;
 }
 
 @media (width < 48.4375rem) {
@@ -135,5 +141,8 @@
 		&__menu-close {
 			display: none;
 		}
+	}
+	header {
+		height: 4rem;
 	}
 }
