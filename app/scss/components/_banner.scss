@@ -1,0 +1,129 @@
+.banner {
+	position: relative;
+	top: -4rem;
+	&__display-desktop-img {
+		display: none;
+		@media (width >= 48.4375rem) {
+			display: flex;
+			flex-shrink: 0;
+		}
+	}
+	&__display-mobile-img {
+		display: flex;
+		flex-shrink: 0;
+		@media (width >= 48.4375rem) {
+			display: none;
+		}
+	}
+
+	&__slider {
+		width: var(--banner-width);
+		margin-inline: auto;
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__slider-list {
+		display: flex;
+		flex-direction: row;
+		flex-shrink: 0;
+		aspect-ratio: 1 / 1;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+		box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+		-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+		scrollbar-width: none; /* Hide scrollbar Firefox */
+		@media (width >= 48.4375rem) {
+			aspect-ratio: 16 / 9;
+		}
+	}
+	&__slider-item {
+		display: inline-flex;
+		position: absolute;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__slider-list::-webkit-scrollbar {
+		display: none;
+	}
+
+	&__nav-desktop {
+		display: none;
+		column-gap: 0.5rem;
+		position: absolute;
+		bottom: 1.25rem;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		text-align: center;
+		text-transform: uppercase;
+
+		@media (width >= 48.4375rem) {
+			display: flex;
+		}
+
+		a {
+			color: var(--clr-light);
+			text-decoration: none;
+			opacity: 0.75;
+		}
+
+		a:hover {
+			opacity: 1;
+		}
+	}
+	&__nav-mobile {
+		display: flex;
+		column-gap: 1.25rem;
+		position: absolute;
+		bottom: 1.25rem;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+
+		@media (width >= 48.4375rem) {
+			display: none;
+		}
+
+		a {
+			width: 0.75rem;
+			height: 0.75rem;
+			border-radius: 50%;
+			background-color: var(--clr-light);
+			text-decoration: none;
+			opacity: 0.75;
+			transition: opacity ease 250ms;
+		}
+
+		a:hover {
+			opacity: 1;
+		}
+	}
+
+	&__social-links {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		left: 1rem;
+		top: 6rem;
+		z-index: 2;
+		svg {
+			fill: var(--clr-light);
+			height: 2.5rem;
+			width: 2.5rem;
+			padding: 0.4rem;
+			background-color: var(--clr-800);
+			border-radius: 25%;
+		}
+		svg:hover {
+			background-color: var(--clr-700);
+			transition: 250ms;
+		}
+	}
+}

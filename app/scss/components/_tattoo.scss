@@ -1,0 +1,129 @@
+.tattoo {
+	display: grid;
+	grid-template-columns: var(--grid-col-spacing);
+	grid-template-rows: var(--grid-row-spacing);
+	gap: var(--space-gap);
+	padding: var(--size-p-4) 0;
+
+	&__title {
+		grid-column: 2 / -2;
+		grid-row: 1;
+		text-align: center;
+	}
+
+	&__img {
+		grid-column: 2 / -2;
+		grid-row: 2;
+
+		@media (width >= 43.75em) {
+			grid-column: 4 / 6;
+			grid-row: 2 / 5;
+		}
+
+		@media (width >= 62.5em) {
+			grid-column: 6 / 10;
+			grid-row: 2 / 6;
+		}
+	}
+
+	&__info {
+		grid-column: 2 / -2;
+
+		@media (width >= 43.75em) {
+			grid-column: 5 / -2;
+			grid-row: 2 / 5;
+		}
+
+		@media (width >= 62.5em) {
+			grid-column: 9 / -2;
+			grid-row: 2 / 7;
+		}
+	}
+
+	&__slider-wrapper-1-title {
+		grid-column: 2 / -2;
+		grid-row: 8 / 9;
+		text-align: center;
+	}
+	&__slider-wrapper-2-title {
+		grid-column: 2 / -2;
+		grid-row: 11 / 12;
+		text-align: center;
+	}
+
+	&__slider-wrapper-1 {
+		grid-column: 2 / -2;
+		grid-row: 9 / 11;
+	}
+	&__slider-wrapper-2 {
+		grid-column: 2 / -2;
+		grid-row: 12 / 14;
+	}
+	&__slider-wrapper-1,
+	.tattoo__slider-wrapper-2 {
+		height: var(--height);
+		overflow: hidden;
+		mask-image: linear-gradient(
+			to right,
+			transparent,
+			#000 10% 90%,
+			transparent
+		);
+		align-items: center;
+	}
+
+	&__slider {
+		display: flex;
+		position: relative;
+		width: 100%;
+		min-width: calc(var(--width) * var(--quantity));
+
+		.tattoo__slider-item {
+			width: var(--width);
+			height: var(--height);
+			position: absolute;
+			left: 100%;
+		}
+	}
+
+	--animation-time: 30s;
+	.animate-right {
+		animation: runRight var(--animation-time) linear infinite;
+		transition: filter 0.5s;
+		animation-delay: calc(
+			(var(--animation-time) / var(--quantity)) * (var(--position) - 1) -
+				var(--animation-time)
+		) !important;
+	}
+	.animate-left {
+		animation: runLeft var(--animation-time) linear infinite;
+		transition: filter 0.5s;
+		animation-delay: calc(
+			(var(--animation-time) / var(--quantity)) * (var(--position) - 1) -
+				var(--animation-time)
+		) !important;
+	}
+	@keyframes runLeft {
+		from {
+			left: 100%;
+		}
+		to {
+			left: calc(var(--width) * -1);
+		}
+	}
+	@keyframes runRight {
+		from {
+			left: calc(var(--width) * -1);
+		}
+		to {
+			left: 100%;
+		}
+	}
+	&__slider:hover .tattoo__slider-item {
+		animation-play-state: paused !important;
+		filter: grayscale(1);
+	}
+	&__slider .tattoo__slider-item:hover {
+		filter: grayscale(0);
+	}
+}

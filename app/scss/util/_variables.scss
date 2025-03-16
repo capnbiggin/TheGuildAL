@@ -1,0 +1,75 @@
+:root {
+	// Site Color
+	--clr-dark: var(--color-slate-900);
+	--clr-light: var(--color-slate-100);
+	--color-black: #000;
+	--color-white: #fff;
+	--clr-50: var(--color-slate-50);
+	--clr-100: var(--color-slate-100);
+	--clr-200: var(--color-slate-200);
+	--clr-300: var(--color-slate-300);
+	--clr-400: var(--color-slate-400);
+	--clr-500: var(--color-slate-500);
+	--clr-600: var(--color-slate-600);
+	--clr-700: var(--color-slate-700);
+	--clr-800: var(--color-slate-800);
+	--clr-900: var(--color-slate-900);
+	--clr-950: var(--color-slate-950);
+
+	--bg-gradient: linear-gradient(
+		225deg,
+		var(--clr-800) 0%,
+		var(--clr-900) 100%
+	);
+	--tx-gradient: linear-gradient(
+		90deg,
+		var(--clr-100) 0%,
+		var(--clr-200) 50%,
+		var(--clr-300) 100%
+	);
+
+	// Padding/Margins
+	--size-p-1: 4px;
+	--size-p-2: 8px;
+	--size-p-3: 16px;
+	--size-p-4: 20px;
+	--size-p-5: 40px;
+	--size-p-6: 80px;
+	--size-p-7: 160px;
+	--size-p-8: 320px;
+
+	--space-lr: 40px;
+	--space-gap: 20px;
+	--grid-count: 2;
+
+	--section-pad-top: var(--size-p-5);
+
+	@media (width >= 43.75em) {
+		--space-lr: var(--size-p-5);
+		--space-gap: 30px;
+		--grid-count: 6;
+	}
+
+	@media (width >= 62.5em) {
+		--grid-count: 12;
+
+		--sec-pad-top: var(--size-p-6);
+	}
+
+	// Site Width
+	--max-site-width: 65rem;
+	--site-width: min(100% - var(--space-lr), var(--max-site-width));
+	--banner-width: min(100%, 75rem);
+
+	// Grid Spacing
+	--grid-col-spacing: 1fr
+		repeat(
+			var(--grid-count),
+			calc(
+				(var(--site-width) - (var(--grid-count) - 1) * var(--space-gap)) /
+					var(--grid-count)
+			)
+		)
+		1fr;
+	--grid-row-spacing: 1fr repeat(var(--grid-count)) 1fr;
+}
