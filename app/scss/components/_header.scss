@@ -70,6 +70,13 @@
 		height: 4rem;
 		text-transform: uppercase;
 		list-style: none;
+
+		> ul,
+		.topnav__dropdown-item:hover {
+			visibility: visible;
+			opacity: 1;
+			display: block;
+		}
 	}
 	&__link {
 		height: 100%;
@@ -81,9 +88,17 @@
 		text-decoration: none;
 	}
 	&__link:hover {
-		background-color: var(--clr-800);
+		background-color: var(--clr-700);
 		transition: 500ms ease-in-out;
-		border-radius: 20px;
+	}
+	&__dropdown {
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		transition: all 500ms ease-in-out;
+		margin-top: 1rem;
+		left: 0;
+		display: none;
 	}
 }
 
@@ -116,23 +131,36 @@ header {
 		&__img {
 			display: block;
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: -1.5rem;
+			left: 3rem;
 			z-index: 11;
 			width: 200px;
 		}
 
 		&__menu {
-			width: var(--site-width);
-			top: 0;
+			width: var(--banner-width);
+			top: 1.5rem;
+			right: 2rem;
 			translate: 0;
 			height: 4rem;
 			list-style: none;
 			display: flex;
 			flex-direction: row;
 			justify-content: flex-end;
+			gap: 0.25rem;
 			margin-inline: auto;
 			background: none;
+		}
+		&__link {
+			background-color: var(--clr-800);
+			height: 2rem;
+			border-radius: 20px;
+			opacity: 80%;
+		}
+		&__link:hover {
+			background-color: var(--clr-700);
+			transition: 250ms;
+			opacity: 1;
 		}
 
 		&__menu-open {

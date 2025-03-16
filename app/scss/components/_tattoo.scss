@@ -16,12 +16,12 @@
 		grid-row: 2;
 
 		@media (width >= 43.75em) {
-			grid-column: 2 / 5;
+			grid-column: 4 / 6;
 			grid-row: 2 / 5;
 		}
 
 		@media (width >= 62.5em) {
-			grid-column: 2 / 6;
+			grid-column: 6 / 10;
 			grid-row: 2 / 6;
 		}
 	}
@@ -69,6 +69,7 @@
 			#000 10% 90%,
 			transparent
 		);
+		align-items: center;
 	}
 
 	&__slider {
@@ -84,18 +85,22 @@
 			left: 100%;
 		}
 	}
+
+	--animation-time: 30s;
 	.animate-right {
-		animation: runRight 10s linear infinite;
+		animation: runRight var(--animation-time) linear infinite;
 		transition: filter 0.5s;
 		animation-delay: calc(
-			(10s / var(--quantity)) * (var(--position) - 1) - 10s
+			(var(--animation-time) / var(--quantity)) * (var(--position) - 1) -
+				var(--animation-time)
 		) !important;
 	}
 	.animate-left {
-		animation: runLeft 10s linear infinite;
+		animation: runLeft var(--animation-time) linear infinite;
 		transition: filter 0.5s;
 		animation-delay: calc(
-			(10s / var(--quantity)) * (var(--position) - 1) - 10s
+			(var(--animation-time) / var(--quantity)) * (var(--position) - 1) -
+				var(--animation-time)
 		) !important;
 	}
 	@keyframes runLeft {

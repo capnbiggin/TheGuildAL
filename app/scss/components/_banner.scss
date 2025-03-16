@@ -114,8 +114,17 @@
 		top: 6rem;
 		svg {
 			fill: var(--clr-light);
-			height: 1.75rem;
-			width: 1.75rem;
+			height: 2.5rem;
+			width: 2.5rem;
+			padding: 0.4rem;
+			background-color: var(--clr-800);
+			border-radius: 25%;
+			opacity: 80%;
+		}
+		svg:hover {
+			background-color: var(--clr-700);
+			transition: 250ms;
+			opacity: 1;
 		}
 	}
 }
