@@ -25,6 +25,34 @@
 			grid-row: 2 / 6;
 		}
 	}
+	&__social {
+		grid-column: 2 / -2;
+		grid-row: 6;
+		display: flex;
+		justify-content: space-around;
+		svg {
+			fill: var(--clr-light);
+			height: 3rem;
+			width: 3rem;
+			padding: 0.4rem;
+			background-color: #1877f2;
+			border-radius: 25%;
+		}
+		svg:hover {
+			background-color: #398cf7;
+			transition: 250ms;
+		}
+
+		@media (width >= 43.75em) {
+			grid-column: 4 / 6;
+			grid-row: 5 / 6;
+		}
+
+		@media (width >= 62.5em) {
+			grid-column: 6 / 10;
+			grid-row: 6 / 7;
+		}
+	}
 
 	&__info {
 		grid-column: 2 / -2;
