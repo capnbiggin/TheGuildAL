@@ -1,4 +1,4 @@
-const navMenu = document.querySelector(".topnav__menu");
+const navMenu = document.querySelector(".topnav__menu-mobile");
 
 const bodyScroll = document.querySelector("body");
 const menuOpen = document.querySelector("#menuOpen");

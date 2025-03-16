@@ -55,7 +55,7 @@
 		width: 3rem;
 	}
 
-	&__menu {
+	&__menu-mobile {
 		position: absolute;
 		inset: 0;
 		height: 100dvh;
@@ -137,7 +137,8 @@ header {
 			width: 200px;
 		}
 
-		&__menu {
+		&__menu-desktop {
+			position: relative;
 			width: var(--banner-width);
 			top: 1.5rem;
 			right: 2rem;
@@ -150,17 +151,16 @@ header {
 			gap: 0.25rem;
 			margin-inline: auto;
 			background: none;
+			z-index: 2;
 		}
 		&__link {
 			background-color: var(--clr-800);
 			height: 2rem;
 			border-radius: 20px;
-			opacity: 80%;
 		}
 		&__link:hover {
 			background-color: var(--clr-700);
 			transition: 250ms;
-			opacity: 1;
 		}
 
 		&__menu-open {
