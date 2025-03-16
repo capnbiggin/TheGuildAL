@@ -40,7 +40,7 @@
 	}
 
 	&__menu-open[aria-expanded="true"] {
-		+ .topnav__menu {
+		+ .topnav__menu-mobile {
 			translate: 0;
 		}
 	}
@@ -63,6 +63,9 @@
 		background-color: var(--clr-800);
 		translate: 100vw 0;
 		transition: 500ms ease-in-out;
+	}
+	&__menu-desktop {
+		display: none;
 	}
 
 	&__item {
