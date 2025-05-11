@@ -14,16 +14,16 @@ function timer(seconds) {
 
 	countdown = setInterval(() => {
 		const secondsLeft = Math.round((then - Date.now()) / 1000);
-		const audio = new Audio("CDTimer/boxing-bell-1-232450.mp3");
 		// check if we should stop it!
 		if (secondsLeft > 600) {
 			document.body.style.backgroundColor = "#478ed1";
 		} else if (secondsLeft <= 600 && secondsLeft > 0) {
 			document.body.style.backgroundColor = "orange";
 		} else if (secondsLeft < 0) {
+			const audio = new Audio("boxing-bell-1-232450.mp3");
 			document.body.style.backgroundColor = "red";
-			audio.play();
 			clearInterval(countdown);
+			audio.play();
 			return;
 		}
 		// display it
