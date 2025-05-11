@@ -16,6 +16,12 @@ body {
 	height: 100dvh;
 	text-align: center;
 	font-family: "Inconsolata", monospace;
+	background-color: linear-gradient(
+		45deg,
+		#42a5f5 0%,
+		#478ed1 50%,
+		#0d47a1 100%
+	);
 	background-image: url(Guild_Logo_Vector_png.png);
 	background-repeat: no-repeat;
 	background-size: 60vh;

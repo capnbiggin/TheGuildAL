@@ -15,7 +15,12 @@ function timer(seconds) {
 	countdown = setInterval(() => {
 		const secondsLeft = Math.round((then - Date.now()) / 1000);
 		// check if we should stop it!
-		if (secondsLeft < 0) {
+		if (secondsLeft > 600) {
+			document.body.style.backgroundColor = "#478ed1";
+		} else if (secondsLeft <= 600 && secondsLeft > 0) {
+			document.body.style.backgroundColor = "orange";
+		} else if (secondsLeft < 0) {
+			document.body.style.backgroundColor = "red";
 			clearInterval(countdown);
 			return;
 		}
