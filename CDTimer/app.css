@@ -13,6 +13,7 @@ html {
 
 body {
 	margin: 0;
+	height: 100dvh;
 	text-align: center;
 	font-family: "Inconsolata", monospace;
 	background-image: url(Guild_Logo_Vector_png.png);
