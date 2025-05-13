@@ -29,13 +29,13 @@ body {
 }
 
 .display__time-left {
-	font-weight: 200;
-	font-size: 30rem;
+	font-weight: 500;
+	font-size: 40dvh;
 	margin: 0;
 	color: white;
 	text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.05);
 	position: relative;
-	top: -10vh;
+	/* top: -10vh; */
 }
 
 .timer {
@@ -92,8 +92,8 @@ body {
 }
 
 .display__end-time {
-	font-size: 4rem;
+	font-size: 6dvh;
 	color: white;
 	position: relative;
-	top: -10vh;
+	/* top: -10vh; */
 }
