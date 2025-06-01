@@ -22,8 +22,8 @@ function timer(seconds) {
 		} else if (secondsLeft <= 0) {
 			const audio = new Audio("boxing-bell-1-232450.mp3");
 			document.body.style.backgroundColor = "red";
-			clearInterval(countdown);
 			audio.play();
+			// clearInterval(countdown);
 			return;
 		}
 		// display it
