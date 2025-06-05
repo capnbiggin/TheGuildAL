@@ -23,7 +23,7 @@ function timer(seconds) {
 			const audio = new Audio("boxing-bell-1-232450.mp3");
 			document.body.style.backgroundColor = "red";
 			audio.play();
-			// clearInterval(countdown);
+			clearInterval(countdown);
 			return;
 		}
 		// display it
@@ -53,6 +53,7 @@ function displayEndTime(timestamp) {
 
 function startTimer() {
 	const seconds = parseInt(this.dataset.time);
+	document.body.style.backgroundColor = "#478ed1";
 	timer(seconds);
 }
 
