@@ -1,88 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./dist/style.css" />
-		<!-- Nav Scroll lock Script -->
-		<script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
-		<title>The Guild</title>
-		<link
-			rel="icon"
-			type="image/x-icon"
-			href="app/img/icon/Guild_Logo_Vector_png.ico"
-		/>
-	</head>
-	<body>
-		<!--Navigation Topbar-->
-		<header>
-			<nav class="topnav">
-				<!--Header Img-->
-				<img
-					class="topnav__mobile-img"
-					src="app/img/Guild logo with background.png"
-					alt="The Guild Logo"
-				/>
-				<!--Mobile menuOpen Button-->
-				<span id="nav-label" hidden>Navigation</span>
-				<button
-					id="menuOpen"
-					class="topnav__menu-open"
-					aria-expanded="false"
-					aria-labelledby="nav-label"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						class="size-6"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-						/>
-					</svg>
-				</button>
-				<!--Menu-->
-				<!-- Mobile Nav -->
-				<ul
-					class="topnav__menu-mobile"
-					role="dialog"
-					aria-labelledby="nav-label"
-				>
-					<!--Mobile menuClose Button-->
-					<button
-						id="menuClose"
-						class="topnav__menu-close"
-						aria-label="close"
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							class="size-6"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M6 18 18 6M6 6l12 12"
-							/>
-						</svg>
-					</button>
-					<li class="topnav__item">
-						<a
-							class="topnav__link"
-							onclick="closeMobileMenu()"
-							href="#events"
-							>Events</a
-						>
-					</li>
-<!--					<li class="topnav__item">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./dist/style.css" />
+        <!-- Nav Scroll lock Script -->
+        <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+        <title>The Guild</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="app/img/icon/Guild_Logo_Vector_png.ico"
+        />
+    </head>
+    <body>
+        <!--Navigation Topbar-->
+        <header>
+            <nav class="topnav">
+                <!--Header Img-->
+                <img
+                    class="topnav__mobile-img"
+                    src="app/img/Guild logo with background.png"
+                    alt="The Guild Logo"
+                />
+                <!--Mobile menuOpen Button-->
+                <span id="nav-label" hidden>Navigation</span>
+                <button
+                    id="menuOpen"
+                    class="topnav__menu-open"
+                    aria-expanded="false"
+                    aria-labelledby="nav-label"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-6"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                        />
+                    </svg>
+                </button>
+                <!--Menu-->
+                <!-- Mobile Nav -->
+                <ul
+                    class="topnav__menu-mobile"
+                    role="dialog"
+                    aria-labelledby="nav-label"
+                >
+                    <!--Mobile menuClose Button-->
+                    <button
+                        id="menuClose"
+                        class="topnav__menu-close"
+                        aria-label="close"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M6 18 18 6M6 6l12 12"
+                            />
+                        </svg>
+                    </button>
+                    <li class="topnav__item">
+                        <a
+                            class="topnav__link"
+                            onclick="closeMobileMenu()"
+                            href="#events"
+                            >Events</a
+                        >
+                    </li>
+                    <!--					<li class="topnav__item">
 						<a
 							class="topnav__link"
 							onclick="closeMobileMenu()"
@@ -90,36 +90,37 @@
 							>Tattoo Artists</a
 						>
 					</li>
--->					<li class="topnav__item">
-						<a
-							class="topnav__link"
-							onclick="closeMobileMenu()"
-							href="#location"
-							>Location</a
-						>
-					</li>
-					<li class="topnav__item">
-						<a
-							class="topnav__link"
-							onclick="closeMobileMenu()"
-							href="https://www.tcgplayer.com/search/all/product?seller=7d154405&view=grid "
-							target="_blank"
-							>TCG Player</a
-						>
-					</li>
-				</ul>
-				<!-- Desktop Nav -->
-				<ul
-					class="topnav__menu-desktop"
-					role="dialog"
-					aria-labelledby="nav-label"
-				>
-					<img
-						class="topnav__img"
-						src="app/img/Guild logo with background.png"
-						alt="The Guild Logo"
-					/>
-<!--					<li class="topnav__item">
+-->
+                    <li class="topnav__item">
+                        <a
+                            class="topnav__link"
+                            onclick="closeMobileMenu()"
+                            href="#location"
+                            >Location</a
+                        >
+                    </li>
+                    <li class="topnav__item">
+                        <a
+                            class="topnav__link"
+                            onclick="closeMobileMenu()"
+                            href="https://www.tcgplayer.com/search/all/product?seller=7d154405&view=grid "
+                            target="_blank"
+                            >TCG Player</a
+                        >
+                    </li>
+                </ul>
+                <!-- Desktop Nav -->
+                <ul
+                    class="topnav__menu-desktop"
+                    role="dialog"
+                    aria-labelledby="nav-label"
+                >
+                    <img
+                        class="topnav__img"
+                        src="app/img/Guild logo with background.png"
+                        alt="The Guild Logo"
+                    />
+                    <!--					<li class="topnav__item">
 						<a class="topnav__link" href="#events">Events</a>
 					</li>
 					<li class="topnav__item">
@@ -127,112 +128,113 @@
 							>Tattoo Artists</a
 						>
 					</li>
--->					<li class="topnav__item">
-						<a class="topnav__link" href="#location">Location</a>
-					</li>
-					<li class="topnav__item">
-						<a
-							class="topnav__link"
-							href="https://www.tcgplayer.com/search/all/product?seller=7d154405&view=grid "
-							target="_blank"
-							>TCG Player</a
-						>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<!--Banner-->
-			<div class="banner">
-				<div class="banner__slider">
-					<div class="banner__slider-list">
-						<img
-							id="fnm"
-							class="banner__display-desktop-img"
-							src="app/img/MTG/TDM-FNM.png"
-							alt=""
-						/>
-						<img
-							id="fnmMobile"
-							class="banner__display-mobile-img"
-							src="app/img/MTG/TDM-FNM-Mobile.png"
-							alt=""
-						/>
-						<img
-							id="armory"
-							class="banner__display-desktop-img"
-							src="app/img/FleshandBlood/Hubted_GEM_Armory.original.webp"
-							alt=""
-						/>
-						<img
-							id="armoryMobile"
-							class="banner__display-mobile-img"
-							src="app/img/FleshandBlood/Mobile_Hunted_GEM_Armory.original.webp"
-							alt=""
-						/>
-						<div class="banner__nav-desktop">
-							<a href="#fnm">Friday Night Magic</a>
-							<span>|</span>
-							<a href="#armory">Armory Events</a>
-						</div>
-						<div class="banner__nav-mobile">
-							<a href="#fnmMobile"></a>
-							<a href="#armoryMobile"></a>
-						</div>
-						<div class="banner__social-links">
-							<!-- Facebook -->
-							<a
-								href="https://discord.gg/vXDwxXAVqf"
-								target="_blank"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									x="0px"
-									y="0px"
-									width="100"
-									height="100"
-									viewBox="0 0 50 50"
-								>
-									<path
-										d="M 30.140625 2 C 26.870375 2 24.045399 2.9969388 22.0625 4.9667969 C 20.079601 6.936655 19 9.823825 19 13.367188 L 19 18 L 13 18 A 1.0001 1.0001 0 0 0 12 19 L 12 27 A 1.0001 1.0001 0 0 0 13 28 L 19 28 L 19 47 A 1.0001 1.0001 0 0 0 20 48 L 28 48 A 1.0001 1.0001 0 0 0 29 47 L 29 28 L 36 28 A 1.0001 1.0001 0 0 0 36.992188 27.125 L 37.992188 19.125 A 1.0001 1.0001 0 0 0 37 18 L 29 18 L 29 14 C 29 12.883334 29.883334 12 31 12 L 37 12 A 1.0001 1.0001 0 0 0 38 11 L 38 3.3457031 A 1.0001 1.0001 0 0 0 37.130859 2.3554688 C 36.247185 2.2382213 33.057174 2 30.140625 2 z M 30.140625 4 C 32.578477 4 34.935105 4.195047 36 4.2949219 L 36 10 L 31 10 C 28.802666 10 27 11.802666 27 14 L 27 19 A 1.0001 1.0001 0 0 0 28 20 L 35.867188 20 L 35.117188 26 L 28 26 A 1.0001 1.0001 0 0 0 27 27 L 27 46 L 21 46 L 21 27 A 1.0001 1.0001 0 0 0 20 26 L 14 26 L 14 20 L 20 20 A 1.0001 1.0001 0 0 0 21 19 L 21 13.367188 C 21 10.22255 21.920305 7.9269075 23.472656 6.3847656 C 25.025007 4.8426237 27.269875 4 30.140625 4 z"
-									></path>
-								</svg>
-							</a>
-							<!-- Discord -->
-							<a
-								href="https://discord.gg/vXDwxXAVqf"
-								target="_blank"
-							>
-								<?xml version="1.0" encoding="UTF-8"?><svg
-									id="Discord-Logo"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 126.644 96"
-								>
-									<path
-										id="Discord-Symbol-Blurple"
-										class="cls-1"
-										d="M81.15,0c-1.2376,2.1973-2.3489,4.4704-3.3591,6.794-9.5975-1.4396-19.3718-1.4396-28.9945,0-.985-2.3236-2.1216-4.5967-3.3591-6.794-9.0166,1.5407-17.8059,4.2431-26.1405,8.0568C2.779,32.5304-1.6914,56.3725.5312,79.8863c9.6732,7.1476,20.5083,12.603,32.0505,16.0884,2.6014-3.4854,4.8998-7.1981,6.8698-11.0623-3.738-1.3891-7.3497-3.1318-10.8098-5.1523.9092-.6567,1.7932-1.3386,2.6519-1.9953,20.281,9.547,43.7696,9.547,64.0758,0,.8587.7072,1.7427,1.3891,2.6519,1.9953-3.4601,2.0457-7.0718,3.7632-10.835,5.1776,1.97,3.8642,4.2683,7.5769,6.8698,11.0623,11.5419-3.4854,22.3769-8.9156,32.0509-16.0631,2.626-27.2771-4.496-50.9172-18.817-71.8548C98.9811,4.2684,90.1918,1.5659,81.1752.0505l-.0252-.0505ZM42.2802,65.4144c-6.2383,0-11.4159-5.6575-11.4159-12.6535s4.9755-12.6788,11.3907-12.6788,11.5169,5.708,11.4159,12.6788c-.101,6.9708-5.026,12.6535-11.3907,12.6535ZM84.3576,65.4144c-6.2637,0-11.3907-5.6575-11.3907-12.6535s4.9755-12.6788,11.3907-12.6788,11.4917,5.708,11.3906,12.6788c-.101,6.9708-5.026,12.6535-11.3906,12.6535Z"
-									/>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--Events-->
-			<div id="events" class="events">
-				<!-- Elfsight Event Calendar | Guild Events -->
-				<script
-					src="https://static.elfsight.com/platform/platform.js"
-					async
-				></script>
-				<div
-					class="elfsight-app-cc20b764-ee3f-4227-8481-a91e4f318d0c"
-					data-elfsight-app-lazy
-				></div>
-			</div>
-			<!--Tattoo Artist-->
-<!--			<div id="tattoo" class="tattoo">
+-->
+                    <li class="topnav__item">
+                        <a class="topnav__link" href="#location">Location</a>
+                    </li>
+                    <li class="topnav__item">
+                        <a
+                            class="topnav__link"
+                            href="https://www.tcgplayer.com/search/all/product?seller=7d154405&view=grid "
+                            target="_blank"
+                            >TCG Player</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!--Banner-->
+            <div class="banner">
+                <div class="banner__slider">
+                    <div class="banner__slider-list">
+                        <img
+                            id="fnm"
+                            class="banner__display-desktop-img"
+                            src="app/img/MTG/TDM-FNM.png"
+                            alt=""
+                        />
+                        <img
+                            id="fnmMobile"
+                            class="banner__display-mobile-img"
+                            src="app/img/MTG/TDM-FNM-Mobile.png"
+                            alt=""
+                        />
+                        <img
+                            id="armory"
+                            class="banner__display-desktop-img"
+                            src="app/img/FleshandBlood/Hubted_GEM_Armory.original.webp"
+                            alt=""
+                        />
+                        <img
+                            id="armoryMobile"
+                            class="banner__display-mobile-img"
+                            src="app/img/FleshandBlood/Mobile_Hunted_GEM_Armory.original.webp"
+                            alt=""
+                        />
+                        <div class="banner__nav-desktop">
+                            <a href="#fnm">Friday Night Magic</a>
+                            <span>|</span>
+                            <a href="#armory">Armory Events</a>
+                        </div>
+                        <div class="banner__nav-mobile">
+                            <a href="#fnmMobile"></a>
+                            <a href="#armoryMobile"></a>
+                        </div>
+                        <div class="banner__social-links">
+                            <!-- Facebook -->
+                            <a
+                                href="https://discord.gg/vXDwxXAVqf"
+                                target="_blank"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    x="0px"
+                                    y="0px"
+                                    width="100"
+                                    height="100"
+                                    viewBox="0 0 50 50"
+                                >
+                                    <path
+                                        d="M 30.140625 2 C 26.870375 2 24.045399 2.9969388 22.0625 4.9667969 C 20.079601 6.936655 19 9.823825 19 13.367188 L 19 18 L 13 18 A 1.0001 1.0001 0 0 0 12 19 L 12 27 A 1.0001 1.0001 0 0 0 13 28 L 19 28 L 19 47 A 1.0001 1.0001 0 0 0 20 48 L 28 48 A 1.0001 1.0001 0 0 0 29 47 L 29 28 L 36 28 A 1.0001 1.0001 0 0 0 36.992188 27.125 L 37.992188 19.125 A 1.0001 1.0001 0 0 0 37 18 L 29 18 L 29 14 C 29 12.883334 29.883334 12 31 12 L 37 12 A 1.0001 1.0001 0 0 0 38 11 L 38 3.3457031 A 1.0001 1.0001 0 0 0 37.130859 2.3554688 C 36.247185 2.2382213 33.057174 2 30.140625 2 z M 30.140625 4 C 32.578477 4 34.935105 4.195047 36 4.2949219 L 36 10 L 31 10 C 28.802666 10 27 11.802666 27 14 L 27 19 A 1.0001 1.0001 0 0 0 28 20 L 35.867188 20 L 35.117188 26 L 28 26 A 1.0001 1.0001 0 0 0 27 27 L 27 46 L 21 46 L 21 27 A 1.0001 1.0001 0 0 0 20 26 L 14 26 L 14 20 L 20 20 A 1.0001 1.0001 0 0 0 21 19 L 21 13.367188 C 21 10.22255 21.920305 7.9269075 23.472656 6.3847656 C 25.025007 4.8426237 27.269875 4 30.140625 4 z"
+                                    ></path>
+                                </svg>
+                            </a>
+                            <!-- Discord -->
+                            <a
+                                href="https://discord.gg/vXDwxXAVqf"
+                                target="_blank"
+                            >
+                                <?xml version="1.0" encoding="UTF-8"?><svg
+                                    id="Discord-Logo"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 126.644 96"
+                                >
+                                    <path
+                                        id="Discord-Symbol-Blurple"
+                                        class="cls-1"
+                                        d="M81.15,0c-1.2376,2.1973-2.3489,4.4704-3.3591,6.794-9.5975-1.4396-19.3718-1.4396-28.9945,0-.985-2.3236-2.1216-4.5967-3.3591-6.794-9.0166,1.5407-17.8059,4.2431-26.1405,8.0568C2.779,32.5304-1.6914,56.3725.5312,79.8863c9.6732,7.1476,20.5083,12.603,32.0505,16.0884,2.6014-3.4854,4.8998-7.1981,6.8698-11.0623-3.738-1.3891-7.3497-3.1318-10.8098-5.1523.9092-.6567,1.7932-1.3386,2.6519-1.9953,20.281,9.547,43.7696,9.547,64.0758,0,.8587.7072,1.7427,1.3891,2.6519,1.9953-3.4601,2.0457-7.0718,3.7632-10.835,5.1776,1.97,3.8642,4.2683,7.5769,6.8698,11.0623,11.5419-3.4854,22.3769-8.9156,32.0509-16.0631,2.626-27.2771-4.496-50.9172-18.817-71.8548C98.9811,4.2684,90.1918,1.5659,81.1752.0505l-.0252-.0505ZM42.2802,65.4144c-6.2383,0-11.4159-5.6575-11.4159-12.6535s4.9755-12.6788,11.3907-12.6788,11.5169,5.708,11.4159,12.6788c-.101,6.9708-5.026,12.6535-11.3907,12.6535ZM84.3576,65.4144c-6.2637,0-11.3907-5.6575-11.3907-12.6535s4.9755-12.6788,11.3907-12.6788,11.4917,5.708,11.3906,12.6788c-.101,6.9708-5.026,12.6535-11.3906,12.6535Z"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Events-->
+            <div id="events" class="events">
+                <!-- Elfsight Event Calendar | Guild Events -->
+                <script
+                    src="https://static.elfsight.com/platform/platform.js"
+                    async
+                ></script>
+                <div
+                    class="elfsight-app-cc20b764-ee3f-4227-8481-a91e4f318d0c"
+                    data-elfsight-app-lazy
+                ></div>
+            </div>
+            <!--Tattoo Artist-->
+            <!--			<div id="tattoo" class="tattoo">
 				<h1 class="tattoo__title">The Guild Tattoo Studio</h1>
 				<div class="tattoo__img">
 					<img
@@ -242,9 +244,9 @@
 					/>
 				</div>
 				<!-- Tattoo Socials -->
-<!--				<div class="tattoo__social">
+            <!--				<div class="tattoo__social">
 					<!-- Facebook -->
-<!--					<a
+            <!--					<a
 						href="https://www.facebook.com/theguildALtattoostudio"
 						target="_blank"
 						><svg
@@ -261,7 +263,7 @@
 						</svg>
 					</a>
 					<!-- Messenger -->
-<!--					<a
+            <!--					<a
 						href="http://m.me/theguildALtattoostudio?text=Hello%20and%20Welcome"
 						target="_blank"
 						><svg
@@ -460,76 +462,77 @@
 					</div>
 				</div>
 			</div>
--->			<!--Location-->
-			<div id="location" class="location">
-				<h1 class="location__title">Contact & Location</h1>
-				<h2 class="location__store-title">Store INFO</h2>
-				<table class="location__store-address">
-					<th colspan="1"><h3>Address</h3></th>
-					<tr>
-						<td>4330 Hwy 78 E</td>
-					</tr>
-					<tr>
-						<td>Suite 110</td>
-					</tr>
-					<tr>
-						<td>Jasper, AL 35504</td>
-					</tr>
-				</table>
-				<table class="location__store-phone">
-					<th colspan="1"><h3>Phone #</h3></th>
-					<tr>
-						<td>205-530-0088</td>
-					</tr>
-				</table>
-				<table class="location__store-hours">
-					<tr>
-						<th colspan="4"><h2>Store Hours</h2></th>
-					</tr>
-					<tr>
-						<td>Mon.</td>
-						<td>12PM</td>
-						<td>-</td>
-						<td>8PM</td>
-					</tr>
-					<tr>
-						<td>Tue.</td>
-						<td>12PM</td>
-						<td>-</td>
-						<td>8PM</td>
-					</tr>
-					<tr>
-						<td>Wed.</td>
-						<td>12PM</td>
-						<td>-</td>
-						<td>8PM</td>
-					</tr>
-					<tr>
-						<td>Thur.</td>
-						<td>12PM</td>
-						<td>-</td>
-						<td>10PM</td>
-					</tr>
-					<tr>
-						<td>Fri.</td>
-						<td>12PM</td>
-						<td>-</td>
-						<td>12AM</td>
-					</tr>
-					<tr>
-						<td>Sat.</td>
-						<td>12PM</td>
-						<td>-</td>
-						<td>12AM</td>
-					</tr>
-					<tr>
-						<td>Sun.</td>
-						<td>12PM</td>
-						<td>-</td>
-						<td>10PM</td>
-					</tr>
-				</table>
-				<table class="location__tattoo-hours">
+-->
+            <!--Location-->
+            <div id="location" class="location">
+                <h1 class="location__title">Contact & Location</h1>
+                <h2 class="location__store-title">Store INFO</h2>
+                <table class="location__store-address">
+                    <th colspan="1"><h3>Address</h3></th>
+                    <tr>
+                        <td>4330 Hwy 78 E</td>
+                    </tr>
+                    <tr>
+                        <td>Suite 110</td>
+                    </tr>
+                    <tr>
+                        <td>Jasper, AL 35504</td>
+                    </tr>
+                </table>
+                <table class="location__store-phone">
+                    <th colspan="1"><h3>Phone #</h3></th>
+                    <tr>
+                        <td>205-530-0088</td>
+                    </tr>
+                </table>
+                <table class="location__store-hours">
+                    <tr>
+                        <th colspan="4"><h2>Store Hours</h2></th>
+                    </tr>
+                    <tr>
+                        <td>Mon.</td>
+                        <td>12PM</td>
+                        <td>-</td>
+                        <td>8PM</td>
+                    </tr>
+                    <tr>
+                        <td>Tue.</td>
+                        <td>12PM</td>
+                        <td>-</td>
+                        <td>8PM</td>
+                    </tr>
+                    <tr>
+                        <td>Wed.</td>
+                        <td>12PM</td>
+                        <td>-</td>
+                        <td>8PM</td>
+                    </tr>
+                    <tr>
+                        <td>Thur.</td>
+                        <td>12PM</td>
+                        <td>-</td>
+                        <td>10PM</td>
+                    </tr>
+                    <tr>
+                        <td>Fri.</td>
+                        <td>12PM</td>
+                        <td>-</td>
+                        <td>12AM</td>
+                    </tr>
+                    <tr>
+                        <td>Sat.</td>
+                        <td>12PM</td>
+                        <td>-</td>
+                        <td>12AM</td>
+                    </tr>
+                    <tr>
+                        <td>Sun.</td>
+                        <td>12PM</td>
+                        <td>-</td>
+                        <td>10PM</td>
+                    </tr>
+                </table>
+                <!-- --	<table class="location__tattoo-hours">
 					<tr>
 						<th colspan="4"><h2>Tattoo Studio Hours</h2></th>
 					</tr>
@@ -575,27 +578,27 @@
 						<td>-</td>
 						<td>9PM</td>
 					</tr>
-				</table>
-				<div class="location__map">
-					<iframe
-						title="The Guild"
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.739055796748!2d-87.22829442369886!3d33.838235473238306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888861d80a5990c7%3A0x1ce00054118d2c2b!2sThe%20Guild%20(aka%20Gamer&#39;s%20Guild)!5e1!3m2!1sen!2sus!4v1740619788310!5m2!1sen!2sus"
-						width="335"
-						height="335"
-						style="border: 0"
-						allowfullscreen=""
-						loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade"
-					>
-					</iframe>
-				</div>
-			</div>
-			<!--Footer-->
-			<footer class="wrapper footer">
-				<p class="cdTimer"><a href="/CDTimer">Countdown Timer</a></p>
-				<span class="footer__title">~The Guild 2025~</span>
-			</footer>
-		</main>
-		<script src="/app/js/mobile-nav.js"></script>
-	</body>
+				</table>-->
+                <div class="location__map">
+                    <iframe
+                        title="The Guild"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.739055796748!2d-87.22829442369886!3d33.838235473238306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888861d80a5990c7%3A0x1ce00054118d2c2b!2sThe%20Guild%20(aka%20Gamer&#39;s%20Guild)!5e1!3m2!1sen!2sus!4v1740619788310!5m2!1sen!2sus"
+                        width="335"
+                        height="335"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    >
+                    </iframe>
+                </div>
+            </div>
+            <!--Footer-->
+            <footer class="wrapper footer">
+                <p class="cdTimer"><a href="/CDTimer">Countdown Timer</a></p>
+                <span class="footer__title">~The Guild 2025~</span>
+            </footer>
+        </main>
+        <script src="/app/js/mobile-nav.js"></script>
+    </body>
 </html>
